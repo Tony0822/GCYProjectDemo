@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  GCYDemo
+//
+//  Created by gewara on 17/6/26.
+//  Copyright © 2017年 gewara. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "ConstHeader.h"
+#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
+#import "UIView+Gewara.h"
+#import "NSString+StringTool.h"
+#import "NSTimer+Loop.h"
+
+
+
+
+
+
+
+
+#ifdef DEBUG
+#define D_Log(...) NSLog(__VA_ARGS__)
+#else
+#define D_Log(...)
+#endif
+
+#endif /* PrefixHeader_pch */
