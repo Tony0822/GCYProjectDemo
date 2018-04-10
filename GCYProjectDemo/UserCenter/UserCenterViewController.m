@@ -22,6 +22,7 @@
 #import "GCYAlertViewController.h"
 #import "GCYInstrumentViewController.h"
 #import "RuntimeViewController.h"
+#import "NetWorkingViewController.h"
 
 
 @interface UserCenterViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -34,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self createTableView];
     [self setupSections];
     
@@ -43,6 +44,7 @@
     
     __weak typeof(self) bself = self;
     
+//    section1 ******************************************************************************************
     UserCenterItemModel *item1 = [UserCenterItemModel createfuncName:@"动画VC"
                                                                image:@"icon-list01"
                                                           detailText:@"AnimationDemo"
@@ -93,7 +95,7 @@
     };
     section1.itemArray = @[item1,item2,item3,item4,item5,runtime];
     
-    // 分组二
+    // 分组二 ******************************************************************************************
     UserCenterItemModel *item7 = [UserCenterItemModel createfuncName:@"自定义SegmentView"
                                                                image:@"icon-list01"
                                                        accessoryType:UserCenterAccessoryTypeIndicator];
@@ -140,16 +142,33 @@
         [bself.navigationController pushViewController:vc animated:YES];
     };
     
+    
+//section3 ********************************************************************************************************
+    
+    UserCenterItemModel *afNetWorking = [UserCenterItemModel createfuncName:@"AFNetWorking" accessoryType:UserCenterAccessoryTypeIndicator];
+    afNetWorking.executeCode = ^{
+        NetWorkingViewController *VC = [[NetWorkingViewController alloc] init];
+        [bself.navigationController pushViewController:VC animated:YES];
+    };
+    UserCenterItemModel *SDWebImage = [UserCenterItemModel createfuncName:@"SDWebImage" accessoryType:UserCenterAccessoryTypeIndicator];
+    SDWebImage.executeCode = ^{
+        
+        
+    };
+    
+    
     UserCenterSectionModel *section2 = [UserCenterSectionModel createSectionHeaderName:@"我是分组二"
                                                                           headerHeight:30];
-    section2.itemArray = @[item7,item6,fmdb, websocket, asyncsocket,tencentMap,instrumentVC];
-
-    self.sectionArray = @[section1, section2];
+    section2.itemArray = @[item7,item6,fmdb, websocket, asyncsocket,tencentMap,instrumentVC,afNetWorking, SDWebImage];
+    UserCenterSectionModel *section3 = [UserCenterSectionModel createSectionHeaderName:@"第三方源码之庖丁解牛" headerHeight:50];
+    section3.itemArray = @[afNetWorking, SDWebImage];
+    
+    self.sectionArray = @[section1, section2, section3];
     
 }
 
 - (void)createTableView {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, self.view.height) style:UITableViewStylePlain];
     tableView.backgroundColor = [UIColor whiteColor];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -176,8 +195,8 @@
     UserCenterItemModel *itemModel = sectionModel.itemArray[indexPath.row];
     
     UserCenterCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[UserCenterCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[UserCenterCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     cell.item = itemModel;
     return cell;
