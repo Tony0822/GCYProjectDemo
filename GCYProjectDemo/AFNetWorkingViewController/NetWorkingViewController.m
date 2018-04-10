@@ -7,6 +7,7 @@
 //
 
 #import "NetWorkingViewController.h"
+#import <AFNetworking.h>
 
 static NSString *const bigPic = @"http://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=%E4%BA%BA%E4%BD%93%E6%A8%A1%E7%89%B9&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&cs=2042862249,3783832730&os=3601947425,3304158120&simid=0,0&pn=2&rn=1&di=42033631440&ln=1302&fr=&fmq=1523339801248_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=13&spn=0&pi=0&gsm=0&hs=2&objurl=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F5366d0160924ab18778421c43ffae6cd7a890bb7.jpg&rpstart=0&rpnum=0&adpicid=0";
 static NSString *const smallPic = @"http://small.png";
@@ -48,7 +49,8 @@ static NSString *const smallPic = @"http://small.png";
 }
 
 - (void)customBtnClick:(UIButton *)sender {
-    [self requestDataTask];
+//    [self requestDataTask];
+    [self configurationURLSessionManager];
 }
 - (void)clear {
     self.imageView.image = nil;
@@ -106,6 +108,64 @@ static NSString *const smallPic = @"http://small.png";
 
 
 
+#pragma mark AFURLSessionManager
+- (void)configurationURLSessionManager {
+//    通过默认配置初始化session
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+//    设置网络请求序列化
+    AFHTTPRequestSerializer *requestSerializer = [AFHTTPRequestSerializer serializer];
+    [requestSerializer setValue:@"gcytest" forHTTPHeaderField:@"requestHeader"];
+    requestSerializer.timeoutInterval = 60;
+    requestSerializer.stringEncoding = NSUTF8StringEncoding;
+//    设置返回数据序列化对象
+    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer = responseSerializer;
+//    网络请求安全策略
+    if (true) {
+        AFSecurityPolicy *securityPolicy;
+        securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey];
+        securityPolicy.allowInvalidCertificates = false;
+        securityPolicy.validatesDomainName = YES;
+        manager.securityPolicy = securityPolicy;
+    } else {
+        manager.securityPolicy.allowInvalidCertificates = true;
+        manager.securityPolicy.validatesDomainName = false;
+    }
+//  是否允许请求重定向
+    if (true) {
+        [manager setTaskWillPerformHTTPRedirectionBlock:^NSURLRequest * _Nonnull(NSURLSession * _Nonnull session, NSURLSessionTask * _Nonnull task, NSURLResponse * _Nonnull response, NSURLRequest * _Nonnull request) {
+            if (response) {
+                return nil;
+            }
+            return request;
+        }];
+    }
+//    监听网络状态
+    [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"%ld", status);
+    }];
+    [manager.reachabilityManager startMonitoring];
+    
+    NSURL *url = [NSURL URLWithString:bigPic];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"%lld", downloadProgress.completedUnitCount);
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        NSURL *documentDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        NSURL *fileURL = [documentDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+        NSLog(@"====fileURL:%@", [fileURL absoluteString]);
+        return fileURL;
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        self.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:filePath]];
+        NSLog(@"file downloaded to: %@", filePath);
+    }];
+    
+    
+    [downloadTask resume];
+    
+
+}
 
 
 
