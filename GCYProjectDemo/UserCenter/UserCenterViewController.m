@@ -19,6 +19,9 @@
 #import "FMDBViewController.h"
 #import "WebSocketViewController.h"
 #import "TencentViewController.h"
+#import "GCYAlertViewController.h"
+#import "GCYInstrumentViewController.h"
+#import "RuntimeViewController.h"
 
 
 @interface UserCenterViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -31,7 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self createTableView];
     [self setupSections];
     
@@ -74,12 +77,23 @@
         CustomButtonViewController *vc = [[CustomButtonViewController alloc] init];
         [bself.navigationController pushViewController:vc animated:YES];
     };
-    
 
+    UserCenterItemModel *item5 = [UserCenterItemModel createfuncName:@"AlertController" accessoryType:UserCenterAccessoryTypeNone];
+    item5.executeCode = ^{
+        GCYAlertViewController *vc = [[GCYAlertViewController alloc] init];
+        [bself.navigationController pushViewController:vc animated:YES];
+    };
     UserCenterSectionModel *section1 = [UserCenterSectionModel createSectionHeaderName:nil
                                                                           headerHeight:30];
-    section1.itemArray = @[item1,item2,item3,item4];
     
+    UserCenterItemModel *runtime = [UserCenterItemModel createfuncName:@"RunTime" accessoryType:UserCenterAccessoryTypeNone];
+    runtime.executeCode = ^{
+        RuntimeViewController *vc = [[RuntimeViewController alloc] init];
+        [bself.navigationController pushViewController:vc animated:YES];
+    };
+    section1.itemArray = @[item1,item2,item3,item4,item5,runtime];
+    
+    // 分组二
     UserCenterItemModel *item7 = [UserCenterItemModel createfuncName:@"自定义SegmentView"
                                                                image:@"icon-list01"
                                                        accessoryType:UserCenterAccessoryTypeIndicator];
@@ -120,10 +134,15 @@
         [bself.navigationController pushViewController:vc animated:YES];
     };
     
+    UserCenterItemModel *instrumentVC = [UserCenterItemModel createfuncName:@"instrument的使用" accessoryType:UserCenterAccessoryTypeIndicator];
+    instrumentVC.executeCode = ^{
+        GCYInstrumentViewController *vc = [[GCYInstrumentViewController alloc] init];
+        [bself.navigationController pushViewController:vc animated:YES];
+    };
     
     UserCenterSectionModel *section2 = [UserCenterSectionModel createSectionHeaderName:@"我是分组二"
                                                                           headerHeight:30];
-    section2.itemArray = @[item7,item6,fmdb, websocket, asyncsocket,tencentMap];
+    section2.itemArray = @[item7,item6,fmdb, websocket, asyncsocket,tencentMap,instrumentVC];
 
     self.sectionArray = @[section1, section2];
     

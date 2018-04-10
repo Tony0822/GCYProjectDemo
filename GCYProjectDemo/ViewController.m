@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UserCenterViewController.h"
+#import "GCYDevice.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) UIButton *button;
@@ -20,14 +21,14 @@
     [super viewDidLoad];
     [self.view addSubview:self.button];
     
-    NSMutableArray *firstArr = [NSMutableArray array];
-    NSMutableArray *secondArr = [NSMutableArray array];
-    [firstArr addObject:secondArr];
-    [secondArr addObject:firstArr];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"IBARevealRequestStart" object:nil];
 }
 
 - (void)OnClick {
+    NSString *ssid = [GCYDevice getSSID];
+    NSString *bssid = [GCYDevice getbSSID];
+    NSString *carr = [GCYDevice getCarrier];
+    NSLog(@"%@, %@, %@", ssid, bssid, carr);
     UserCenterViewController *userVC = [[UserCenterViewController alloc] init];
     [self.navigationController pushViewController:userVC animated:YES];
 }

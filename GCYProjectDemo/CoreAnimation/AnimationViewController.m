@@ -11,6 +11,8 @@
 #import "RunloopViewController.h"
 #import "CAShapeLayerAndTextLayerView.h"
 #import "LyricLabel.h"
+#import "BezierViewController.h"
+
 
 @interface AnimationViewController ()
 @property (nonatomic, strong) UIImageView *imgV;
@@ -34,7 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self createCharte];
+//    self.view.layer.contentsRect;
 //    [self testCABasicAnimation];
 //    [self testCAKeyframeAnimation];
 //    [self testCAAnimationGroup];
@@ -44,8 +47,14 @@
 //    [self testNSTimer];
 //    [self testCAShapeLayerAndTextLayer];
     //[self testLyricLabel];
-    [self testCATransform3D];
+//    [self testCATransform3D];
 }
+#pragma 饼状图
+- (void)createCharte {
+    BezierViewController *vc = [[BezierViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma markCATransform3D
 - (void)testCATransform3D {
     CALayer *staticLayerA = [CALayer layer];

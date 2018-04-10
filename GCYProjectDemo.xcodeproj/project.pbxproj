@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F22A65A1FB20FA600DE5AB8 /* UIView+PlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F22A6591FB20FA600DE5AB8 /* UIView+PlaceholderView.m */; };
+		0F64860D1FA5EE190007534C /* GSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F64860C1FA5EE190007534C /* GSAlertView.m */; };
+		0F6486191FA6276A0007534C /* GSAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6486181FA6276A0007534C /* GSAlertController.m */; };
 		0FDBE7031F6818B0000B036C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBE7021F6818B0000B036C /* main.m */; };
 		0FDBE7061F6818B0000B036C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBE7051F6818B0000B036C /* AppDelegate.m */; };
 		0FDBE7091F6818B0000B036C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDBE7081F6818B0000B036C /* ViewController.m */; };
@@ -75,7 +78,17 @@
 		0FDBE9081F6983EC000B036C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDBE8DA1F697700000B036C /* Foundation.framework */; };
 		0FDBE9091F6983F7000B036C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FDBE8D61F6976F0000B036C /* QuartzCore.framework */; };
 		0FDBE90B1F698415000B036C /* QMapKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FDBE90A1F698415000B036C /* QMapKit.bundle */; };
-		207FB904FF9D1C1CDC8D4D7C /* libPods-GCYProjectDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DB67E25BC0F4C3632104F9 /* libPods-GCYProjectDemo.a */; };
+		0FDFB52C1F939AAA00B673D6 /* GCYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFB52B1F939AAA00B673D6 /* GCYAlertViewController.m */; };
+		0FDFB52F1F93AF4F00B673D6 /* GCYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFB52E1F93AF4F00B673D6 /* GCYAlertController.m */; };
+		3E002AD01FF23C2700999C7D /* GCYInstrumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E002ACF1FF23C2700999C7D /* GCYInstrumentViewController.m */; };
+		3E306C5B1FF2426700C6ACB7 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E306C5A1FF2426700C6ACB7 /* BaseTableViewController.m */; };
+		3E306C621FF33C1200C6ACB7 /* BezierCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E306C611FF33C1200C6ACB7 /* BezierCurveView.m */; };
+		3E306C671FF3408A00C6ACB7 /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E306C661FF3408A00C6ACB7 /* BezierViewController.m */; };
+		3E6177FB2047D80B003CAA85 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */; };
+		3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */; };
+		3EC7CB53201B177B0090B1B3 /* GCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CB52201B177B0090B1B3 /* GCYDevice.m */; };
+		3EC7CB55201B1A160090B1B3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC7CB54201B1A160090B1B3 /* CoreTelephony.framework */; };
+		926D48347314724EA3F3D4F7 /* libPods-GCYProjectDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6B160205D411B28183BFBD /* libPods-GCYProjectDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +108,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3EBE1B7A1FF379610094D6B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0F22A6581FB20FA600DE5AB8 /* UIView+PlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PlaceholderView.h"; sourceTree = "<group>"; };
+		0F22A6591FB20FA600DE5AB8 /* UIView+PlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PlaceholderView.m"; sourceTree = "<group>"; };
+		0F64860B1FA5EE190007534C /* GSAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSAlertView.h; sourceTree = "<group>"; };
+		0F64860C1FA5EE190007534C /* GSAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSAlertView.m; sourceTree = "<group>"; };
+		0F6486171FA6276A0007534C /* GSAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSAlertController.h; sourceTree = "<group>"; };
+		0F6486181FA6276A0007534C /* GSAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSAlertController.m; sourceTree = "<group>"; };
 		0FDBE6FE1F6818B0000B036C /* GCYProjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCYProjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDBE7021F6818B0000B036C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0FDBE7041F6818B0000B036C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -220,9 +252,29 @@
 		0FDBE8F41F698207000B036C /* libz.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libz.tbd; sourceTree = "<group>"; };
 		0FDBE8F61F69821F000B036C /* QMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QMapKit.framework; sourceTree = "<group>"; };
 		0FDBE90A1F698415000B036C /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QMapKit.bundle; sourceTree = "<group>"; };
+		0FDFB52A1F939AAA00B673D6 /* GCYAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYAlertViewController.h; sourceTree = "<group>"; };
+		0FDFB52B1F939AAA00B673D6 /* GCYAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYAlertViewController.m; sourceTree = "<group>"; };
+		0FDFB52D1F93AF4F00B673D6 /* GCYAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYAlertController.h; sourceTree = "<group>"; };
+		0FDFB52E1F93AF4F00B673D6 /* GCYAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYAlertController.m; sourceTree = "<group>"; };
+		3A6B160205D411B28183BFBD /* libPods-GCYProjectDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCYProjectDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E002ACE1FF23C2700999C7D /* GCYInstrumentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYInstrumentViewController.h; sourceTree = "<group>"; };
+		3E002ACF1FF23C2700999C7D /* GCYInstrumentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYInstrumentViewController.m; sourceTree = "<group>"; };
+		3E306C591FF2426700C6ACB7 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		3E306C5A1FF2426700C6ACB7 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		3E306C601FF33C1200C6ACB7 /* BezierCurveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierCurveView.h; sourceTree = "<group>"; };
+		3E306C611FF33C1200C6ACB7 /* BezierCurveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierCurveView.m; sourceTree = "<group>"; };
+		3E306C651FF3408A00C6ACB7 /* BezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BezierViewController.h; sourceTree = "<group>"; };
+		3E306C661FF3408A00C6ACB7 /* BezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierViewController.m; sourceTree = "<group>"; };
+		3E6177F92047D80B003CAA85 /* RuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
+		3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
+		3EBE1A491FF373F30094D6B2 /* GCYProjectDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCYProjectDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		3EBE1B7C1FF37A920094D6B2 /* GCYChartsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYChartsViewController.h; sourceTree = "<group>"; };
+		3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYChartsViewController.m; sourceTree = "<group>"; };
+		3EC7CB51201B177B0090B1B3 /* GCYDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDevice.h; sourceTree = "<group>"; };
+		3EC7CB52201B177B0090B1B3 /* GCYDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDevice.m; sourceTree = "<group>"; };
+		3EC7CB54201B1A160090B1B3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		811C19CBCB688B6CF27FD7B1 /* Pods-GCYProjectDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCYProjectDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCYProjectDemo/Pods-GCYProjectDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8E8B4DBC68374A76BB5B9FD1 /* Pods-GCYProjectDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCYProjectDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCYProjectDemo/Pods-GCYProjectDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		B6DB67E25BC0F4C3632104F9 /* libPods-GCYProjectDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GCYProjectDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC7CB55201B1A160090B1B3 /* CoreTelephony.framework in Frameworks */,
 				0FDBE9091F6983F7000B036C /* QuartzCore.framework in Frameworks */,
 				0FDBE9081F6983EC000B036C /* Foundation.framework in Frameworks */,
 				0FDBE9071F6983E6000B036C /* libsqlite3.tbd in Frameworks */,
@@ -238,7 +291,7 @@
 				0FDBE9041F6983B7000B036C /* SystemConfiguration.framework in Frameworks */,
 				0FDBE8F71F69821F000B036C /* QMapKit.framework in Frameworks */,
 				0FDBE8F51F698207000B036C /* libz.tbd in Frameworks */,
-				207FB904FF9D1C1CDC8D4D7C /* libPods-GCYProjectDemo.a in Frameworks */,
+				926D48347314724EA3F3D4F7 /* libPods-GCYProjectDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,13 +337,15 @@
 		0FDBE7001F6818B0000B036C /* GCYProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0FDBE7FF1F682786000B036C /* Common */,
+				3E002ACD1FF23ABC00999C7D /* InstrumentDemo */,
 				0FDBE8191F682786000B036C /* CommonViewController */,
 				0FDBE82C1F682786000B036C /* CoreAnimation */,
 				0FDBE8371F682786000B036C /* FSCustomBUtton */,
 				0FDBE83F1F682786000B036C /* Libraries */,
+				3E6177F82047D7E6003CAA85 /* runtime */,
 				0FDBE86B1F682786000B036C /* SegmentViewController */,
 				0FDBE8891F682786000B036C /* UserCenter */,
-				0FDBE7FF1F682786000B036C /* Common */,
 				0FDBE8671F682786000B036C /* Main */,
 				0FDBE8CA1F68361F000B036C /* TencentMap */,
 				0FDBE7041F6818B0000B036C /* AppDelegate.h */,
@@ -336,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				0FDBE8001F682786000B036C /* ConstHeader.h */,
+				3EC7CB51201B177B0090B1B3 /* GCYDevice.h */,
+				3EC7CB52201B177B0090B1B3 /* GCYDevice.m */,
 				0FDBE8011F682786000B036C /* NSString */,
 				0FDBE8041F682786000B036C /* NSTimer */,
 				0FDBE8071F682786000B036C /* resource */,
@@ -402,6 +459,8 @@
 				0FDBE8161F682786000B036C /* UIView+Gewara.m */,
 				0FDBE8171F682786000B036C /* UIView+XWAddForRoundedCorner.h */,
 				0FDBE8181F682786000B036C /* UIView+XWAddForRoundedCorner.m */,
+				0F22A6581FB20FA600DE5AB8 /* UIView+PlaceholderView.h */,
+				0F22A6591FB20FA600DE5AB8 /* UIView+PlaceholderView.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -409,6 +468,7 @@
 		0FDBE8191F682786000B036C /* CommonViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0FDFB5291F939A6E00B673D6 /* GCYAlertController */,
 				0FDBE81A1F682786000B036C /* Common */,
 				0FDBE81F1F682786000B036C /* FMDB */,
 				0FDBE8271F682786000B036C /* WebSocket */,
@@ -462,6 +522,8 @@
 		0FDBE82C1F682786000B036C /* CoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				3E46D22B1FF36EF1001B453F /* chartVC */,
+				3E306C631FF33C1600C6ACB7 /* View */,
 				0FDBE82D1F682786000B036C /* AnimationViewController.h */,
 				0FDBE82E1F682786000B036C /* AnimationViewController.m */,
 				0FDBE82F1F682786000B036C /* CAShapeLayerAndTextLayerView.h */,
@@ -800,6 +862,8 @@
 			children = (
 				0FDBE8681F682786000B036C /* BaseViewController.h */,
 				0FDBE8691F682786000B036C /* BaseViewController.m */,
+				3E306C591FF2426700C6ACB7 /* BaseTableViewController.h */,
+				3E306C5A1FF2426700C6ACB7 /* BaseTableViewController.m */,
 				0FDBE86A1F682786000B036C /* PrefixHeader.pch */,
 			);
 			path = Main;
@@ -895,9 +959,72 @@
 			name = TencentMap;
 			sourceTree = "<group>";
 		};
+		0FDFB5291F939A6E00B673D6 /* GCYAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				0FDFB52A1F939AAA00B673D6 /* GCYAlertViewController.h */,
+				0FDFB52B1F939AAA00B673D6 /* GCYAlertViewController.m */,
+				0FDFB52D1F93AF4F00B673D6 /* GCYAlertController.h */,
+				0FDFB52E1F93AF4F00B673D6 /* GCYAlertController.m */,
+				0F64860B1FA5EE190007534C /* GSAlertView.h */,
+				0F64860C1FA5EE190007534C /* GSAlertView.m */,
+				0F6486171FA6276A0007534C /* GSAlertController.h */,
+				0F6486181FA6276A0007534C /* GSAlertController.m */,
+			);
+			path = GCYAlertController;
+			sourceTree = "<group>";
+		};
+		3E002ACD1FF23ABC00999C7D /* InstrumentDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3E002ACE1FF23C2700999C7D /* GCYInstrumentViewController.h */,
+				3E002ACF1FF23C2700999C7D /* GCYInstrumentViewController.m */,
+			);
+			path = InstrumentDemo;
+			sourceTree = "<group>";
+		};
+		3E306C631FF33C1600C6ACB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E306C641FF3406C00C6ACB7 /* VC */,
+				3E306C601FF33C1200C6ACB7 /* BezierCurveView.h */,
+				3E306C611FF33C1200C6ACB7 /* BezierCurveView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3E306C641FF3406C00C6ACB7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3E306C651FF3408A00C6ACB7 /* BezierViewController.h */,
+				3E306C661FF3408A00C6ACB7 /* BezierViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		3E46D22B1FF36EF1001B453F /* chartVC */ = {
+			isa = PBXGroup;
+			children = (
+				3EBE1A491FF373F30094D6B2 /* GCYProjectDemo-Bridging-Header.h */,
+				3EBE1B7C1FF37A920094D6B2 /* GCYChartsViewController.h */,
+				3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */,
+			);
+			path = chartVC;
+			sourceTree = "<group>";
+		};
+		3E6177F82047D7E6003CAA85 /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				3E6177F92047D80B003CAA85 /* RuntimeViewController.h */,
+				3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */,
+			);
+			path = runtime;
+			sourceTree = "<group>";
+		};
 		53A22AECA88AAE56985E18A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3EC7CB54201B1A160090B1B3 /* CoreTelephony.framework */,
 				0FDBE8DC1F697708000B036C /* CoreLocation.framework */,
 				0FDBE8DA1F697700000B036C /* Foundation.framework */,
 				0FDBE8D81F6976F8000B036C /* CoreGraphics.framework */,
@@ -906,7 +1033,7 @@
 				0FDBE8D21F6976D9000B036C /* libz.tbd */,
 				0FDBE8D01F6976D1000B036C /* libsqlite3.tbd */,
 				0FDBE8CE1F6976BD000B036C /* QMapKit.framework */,
-				B6DB67E25BC0F4C3632104F9 /* libPods-GCYProjectDemo.a */,
+				3A6B160205D411B28183BFBD /* libPods-GCYProjectDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -933,6 +1060,7 @@
 				0FDBE6FC1F6818B0000B036C /* Resources */,
 				2019C087B34358443D011405 /* [CP] Embed Pods Frameworks */,
 				10356D90B175D25CC0DE42F5 /* [CP] Copy Pods Resources */,
+				3EBE1B7A1FF379610094D6B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -990,7 +1118,8 @@
 				TargetAttributes = {
 					0FDBE6FD1F6818B0000B036C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 9P7X8YSS7W;
+						DevelopmentTeam = LT4PPLS37C;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1075,9 +1204,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GCYProjectDemo/Pods-GCYProjectDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1090,9 +1222,38 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GCYProjectDemo/Pods-GCYProjectDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/RACSRWebSocket/RACSRWebSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RACSRWebSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1105,13 +1266,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GCYProjectDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1124,24 +1288,31 @@
 				0FDBE8C51F682786000B036C /* TableViewDelegate.m in Sources */,
 				0FDBE8981F682786000B036C /* NSString+StringTool.m in Sources */,
 				0FDBE7091F6818B0000B036C /* ViewController.m in Sources */,
+				3EC7CB53201B177B0090B1B3 /* GCYDevice.m in Sources */,
 				0FDBE8C31F682786000B036C /* SettingViewController.m in Sources */,
 				0FDBE8BF1F682786000B036C /* PageContentViewController.m in Sources */,
 				0FDBE8A81F682786000B036C /* JKDBModel.m in Sources */,
 				0FDBE8AC1F682786000B036C /* AnimationViewController.m in Sources */,
 				0FDBE8C71F682786000B036C /* UserCenterItemModel.m in Sources */,
+				0F6486191FA6276A0007534C /* GSAlertController.m in Sources */,
 				0FDBE8AB1F682786000B036C /* WebSocketViewController.m in Sources */,
 				0FDBE8A61F682786000B036C /* GCYTestObject.m in Sources */,
 				0FDBE7061F6818B0000B036C /* AppDelegate.m in Sources */,
 				0FDBE8B31F682786000B036C /* FSCustomButton.m in Sources */,
 				0FDBE8C01F682786000B036C /* SegmentTitleView.m in Sources */,
 				0FDBE8C21F682786000B036C /* TimerViewController.m in Sources */,
+				3E306C671FF3408A00C6ACB7 /* BezierViewController.m in Sources */,
 				0FDBE8A71F682786000B036C /* JKDBHelper.m in Sources */,
 				0FDBE8B91F682786000B036C /* ScrollViewTableView.m in Sources */,
 				0FDBE8C41F682786000B036C /* TableViewDataSource.m in Sources */,
 				0FDBE8B81F682786000B036C /* LineTableViewCell.m in Sources */,
+				3E002AD01FF23C2700999C7D /* GCYInstrumentViewController.m in Sources */,
 				0FDBE8AE1F682786000B036C /* LyricLabel.m in Sources */,
 				0FDBE8C11F682786000B036C /* SegmentViewController.m in Sources */,
+				0FDFB52C1F939AAA00B673D6 /* GCYAlertViewController.m in Sources */,
+				0F64860D1FA5EE190007534C /* GSAlertView.m in Sources */,
 				0FDBE8B21F682786000B036C /* CustomButtonViewController.m in Sources */,
+				3E306C621FF33C1200C6ACB7 /* BezierCurveView.m in Sources */,
 				0FDBE8B51F682786000B036C /* BaseViewController.m in Sources */,
 				0FDBE8A21F682786000B036C /* UIView+GCYAddForRoundedCorner.m in Sources */,
 				0FDBE8AA1F682786000B036C /* WebSocketManager.m in Sources */,
@@ -1150,17 +1321,22 @@
 				0FDBE8B01F682786000B036C /* RunloopViewController.m in Sources */,
 				0FDBE8BC1F682786000B036C /* STViewController.m in Sources */,
 				0FDBE8A31F682786000B036C /* UIView+Gewara.m in Sources */,
+				0FDFB52F1F93AF4F00B673D6 /* GCYAlertController.m in Sources */,
+				0F22A65A1FB20FA600DE5AB8 /* UIView+PlaceholderView.m in Sources */,
 				0FDBE8991F682786000B036C /* NSTimer+Loop.m in Sources */,
 				0FDBE8C61F682786000B036C /* UserCenterCell.m in Sources */,
 				0FDBE8A91F682786000B036C /* FMDBViewController.m in Sources */,
 				0FDBE8BE1F682786000B036C /* PageContentView.m in Sources */,
 				0FDBE8C91F682786000B036C /* UserCenterViewController.m in Sources */,
 				0FDBE8A41F682786000B036C /* UIView+XWAddForRoundedCorner.m in Sources */,
+				3E306C5B1FF2426700C6ACB7 /* BaseTableViewController.m in Sources */,
+				3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */,
 				0FDBE8BB1F682786000B036C /* STContentViewController.m in Sources */,
 				0FDBE8B71F682786000B036C /* BottomTableViewCell.m in Sources */,
 				0FDBE7031F6818B0000B036C /* main.m in Sources */,
 				0FDBE8BA1F682786000B036C /* TopTableViewCell.m in Sources */,
 				0FDBE8B41F682786000B036C /* DWTableViewHelper.m in Sources */,
+				3E6177FB2047D80B003CAA85 /* RuntimeViewController.m in Sources */,
 				0FDBE8CD1F68366F000B036C /* TencentViewController.m in Sources */,
 				0FDBE8B11F682786000B036C /* CALayer+FSUI.m in Sources */,
 				0FDBE8AD1F682786000B036C /* CAShapeLayerAndTextLayerView.m in Sources */,
@@ -1317,14 +1493,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8E8B4DBC68374A76BB5B9FD1 /* Pods-GCYProjectDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9P7X8YSS7W;
+				CLANG_ENABLE_MODULES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = LT4PPLS37C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/GCYProjectDemo",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GCYProjectDemo/Main/PrefixHeader.pch";
 				INFOPLIST_FILE = GCYProjectDemo/Info.plist;
@@ -1380,6 +1560,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gaochongyang.GCYProjectDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCYProjectDemo/CoreAnimation/chartVC/GCYProjectDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1387,14 +1570,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 811C19CBCB688B6CF27FD7B1 /* Pods-GCYProjectDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9P7X8YSS7W;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LT4PPLS37C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/GCYProjectDemo",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/GCYProjectDemo/Main/PrefixHeader.pch";
 				INFOPLIST_FILE = GCYProjectDemo/Info.plist;
@@ -1450,6 +1636,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = gaochongyang.GCYProjectDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GCYProjectDemo/CoreAnimation/chartVC/GCYProjectDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

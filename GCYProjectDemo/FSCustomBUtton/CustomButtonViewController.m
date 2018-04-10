@@ -29,7 +29,7 @@
     button.backgroundColor = UIColorMake(222, 234, 214);
     [button setImage:[UIImage imageNamed:@"my_ic_coupon"] forState:UIControlStateNormal];
     button.layer.cornerRadius = 4;
-    button.buttonImagePosition = FSCustomButtonImagePositionTop;
+    button.buttonImagePosition = FSCustomButtonImagePositionRight;
     button.titleEdgeInsets = UIEdgeInsetsMake(10, 0, 0, 0);
     [self.view addSubview:button];
     //    [button sizeToFit];

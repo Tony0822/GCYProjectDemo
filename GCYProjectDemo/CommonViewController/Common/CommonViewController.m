@@ -24,14 +24,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // 测试星星View
+}
+#pragma mark -setter.getter
+
+- (void)test1 {
+    //     测试星星View
     [self.view addSubview:self.starView];
     self.level = 3.8;
     self.name = @"asc";
     NSArray *a = @[@"1",@"2"];
     self.array = [NSMutableArray arrayWithArray:a];
 }
-#pragma mark -setter.getter
+
 - (NSMutableArray *)array {
     if (!_array) {
         _array = [NSMutableArray array];
