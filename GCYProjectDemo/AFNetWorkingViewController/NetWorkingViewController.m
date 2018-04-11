@@ -143,7 +143,7 @@ static NSString *const smallPic = @"http://small.png";
     }
 //    监听网络状态
     [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        NSLog(@"%ld", status);
+        NSLog(@"NetworkStatus====%ld", status);
     }];
     [manager.reachabilityManager startMonitoring];
     
