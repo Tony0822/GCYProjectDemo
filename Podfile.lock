@@ -18,6 +18,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - GCYBase (0.1.2)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - RACSRWebSocket (1.1.3):
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CocoaAsyncSocket
   - FMDB
+  - GCYBase (from `https://github.com/Tony0822/GCYBase.git`)
   - MJExtension
   - MJRefresh
   - RACSRWebSocket
@@ -49,10 +51,20 @@ DEPENDENCIES:
   - SocketRocket
   - YYKit
 
+EXTERNAL SOURCES:
+  GCYBase:
+    :git: https://github.com/Tony0822/GCYBase.git
+
+CHECKOUT OPTIONS:
+  GCYBase:
+    :commit: f7a744f2e6217abe35c55ab0ab94e3ab97ddf501
+    :git: https://github.com/Tony0822/GCYBase.git
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaAsyncSocket: 7eadd3f59e1a6c84e2aefc93e9ff7b55156fe174
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GCYBase: 5fcf3d89adb8f08e5bec7bad56011e7bdb7d9f22
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   RACSRWebSocket: 6c75361f81f57e93c5b81191ba568f0382e54c01
@@ -61,6 +73,6 @@ SPEC CHECKSUMS:
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 8e50fe47e5777cc7df95a52baa9af80cbda60aab
+PODFILE CHECKSUM: 519ae29648414506ecc5c3911fbb7e30eb494cee
 
 COCOAPODS: 1.3.1
