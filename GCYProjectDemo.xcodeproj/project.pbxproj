@@ -85,6 +85,7 @@
 		3E306C621FF33C1200C6ACB7 /* BezierCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E306C611FF33C1200C6ACB7 /* BezierCurveView.m */; };
 		3E306C671FF3408A00C6ACB7 /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E306C661FF3408A00C6ACB7 /* BezierViewController.m */; };
 		3E6177FB2047D80B003CAA85 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */; };
+		3E818CA5208DC2DA00AFDC8E /* GCYDebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CA4208DC2DA00AFDC8E /* GCYDebugManager.m */; };
 		3E958B81207C7E6600E45020 /* NetWorkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E958B80207C7E6600E45020 /* NetWorkingViewController.m */; };
 		3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */; };
 		3EC7CB53201B177B0090B1B3 /* GCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CB52201B177B0090B1B3 /* GCYDevice.m */; };
@@ -268,6 +269,8 @@
 		3E306C661FF3408A00C6ACB7 /* BezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BezierViewController.m; sourceTree = "<group>"; };
 		3E6177F92047D80B003CAA85 /* RuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
 		3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
+		3E818CA3208DC2DA00AFDC8E /* GCYDebugManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugManager.h; sourceTree = "<group>"; };
+		3E818CA4208DC2DA00AFDC8E /* GCYDebugManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugManager.m; sourceTree = "<group>"; };
 		3E958B7F207C7E6600E45020 /* NetWorkingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkingViewController.h; sourceTree = "<group>"; };
 		3E958B80207C7E6600E45020 /* NetWorkingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkingViewController.m; sourceTree = "<group>"; };
 		3EBE1A491FF373F30094D6B2 /* GCYProjectDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCYProjectDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -340,6 +343,7 @@
 		0FDBE7001F6818B0000B036C /* GCYProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3E818CA2208DC29F00AFDC8E /* GCYDebuge */,
 				0FDBE7FF1F682786000B036C /* Common */,
 				3E958B7E207C7E2600E45020 /* AFNetWorkingViewController */,
 				3E002ACD1FF23ABC00999C7D /* InstrumentDemo */,
@@ -1025,6 +1029,15 @@
 			path = runtime;
 			sourceTree = "<group>";
 		};
+		3E818CA2208DC29F00AFDC8E /* GCYDebuge */ = {
+			isa = PBXGroup;
+			children = (
+				3E818CA3208DC2DA00AFDC8E /* GCYDebugManager.h */,
+				3E818CA4208DC2DA00AFDC8E /* GCYDebugManager.m */,
+			);
+			path = GCYDebuge;
+			sourceTree = "<group>";
+		};
 		3E958B7E207C7E2600E45020 /* AFNetWorkingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1351,6 +1364,7 @@
 				0FDBE8BA1F682786000B036C /* TopTableViewCell.m in Sources */,
 				0FDBE8B41F682786000B036C /* DWTableViewHelper.m in Sources */,
 				3E6177FB2047D80B003CAA85 /* RuntimeViewController.m in Sources */,
+				3E818CA5208DC2DA00AFDC8E /* GCYDebugManager.m in Sources */,
 				0FDBE8CD1F68366F000B036C /* TencentViewController.m in Sources */,
 				0FDBE8B11F682786000B036C /* CALayer+FSUI.m in Sources */,
 				0FDBE8AD1F682786000B036C /* CAShapeLayerAndTextLayerView.m in Sources */,

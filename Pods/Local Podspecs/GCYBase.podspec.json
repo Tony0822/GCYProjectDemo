@@ -1,6 +1,6 @@
 {
   "name": "GCYBase",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "summary": "基础控件集成",
   "description": "主要是平常常用的控件, 能让你快速开发, 喜欢开发",
   "homepage": "https://github.com/Tony0822/GCYBase",
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/Tony0822/GCYBase.git",
-    "tag": "0.1.2"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "GCYBase/Classes/**/*"
+  "source_files": "GCYBase/**/*"
 }
