@@ -92,6 +92,9 @@
 		3E818CB2208ED21800AFDC8E /* GCYDebugSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */; };
 		3E818CB6208F0C2100AFDC8E /* GCYNetworkingConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB5208F0C2100AFDC8E /* GCYNetworkingConfigure.m */; };
 		3E818CB9208F0D1C00AFDC8E /* GCYNetworkingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB8208F0D1C00AFDC8E /* GCYNetworkingBase.m */; };
+		3E818CBC208F322900AFDC8E /* GCYDebugLoggerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CBB208F322900AFDC8E /* GCYDebugLoggerViewController.m */; };
+		3E818CBF208F33C000AFDC8E /* NSString+GCYDebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CBE208F33C000AFDC8E /* NSString+GCYDebugLog.m */; };
+		3E818CC2208F352F00AFDC8E /* GCYDebugLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CC1208F352F00AFDC8E /* GCYDebugLogger.m */; };
 		3E958B81207C7E6600E45020 /* NetWorkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E958B80207C7E6600E45020 /* NetWorkingViewController.m */; };
 		3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */; };
 		3EC7CB53201B177B0090B1B3 /* GCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CB52201B177B0090B1B3 /* GCYDevice.m */; };
@@ -289,6 +292,12 @@
 		3E818CB5208F0C2100AFDC8E /* GCYNetworkingConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingConfigure.m; sourceTree = "<group>"; };
 		3E818CB7208F0D1C00AFDC8E /* GCYNetworkingBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingBase.h; sourceTree = "<group>"; };
 		3E818CB8208F0D1C00AFDC8E /* GCYNetworkingBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingBase.m; sourceTree = "<group>"; };
+		3E818CBA208F322900AFDC8E /* GCYDebugLoggerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugLoggerViewController.h; sourceTree = "<group>"; };
+		3E818CBB208F322900AFDC8E /* GCYDebugLoggerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugLoggerViewController.m; sourceTree = "<group>"; };
+		3E818CBD208F33C000AFDC8E /* NSString+GCYDebugLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GCYDebugLog.h"; sourceTree = "<group>"; };
+		3E818CBE208F33C000AFDC8E /* NSString+GCYDebugLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GCYDebugLog.m"; sourceTree = "<group>"; };
+		3E818CC0208F352F00AFDC8E /* GCYDebugLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugLogger.h; sourceTree = "<group>"; };
+		3E818CC1208F352F00AFDC8E /* GCYDebugLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugLogger.m; sourceTree = "<group>"; };
 		3E958B7F207C7E6600E45020 /* NetWorkingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkingViewController.h; sourceTree = "<group>"; };
 		3E958B80207C7E6600E45020 /* NetWorkingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkingViewController.m; sourceTree = "<group>"; };
 		3EBE1A491FF373F30094D6B2 /* GCYProjectDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCYProjectDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1060,6 +1069,12 @@
 				3E818CAE208ECB1C00AFDC8E /* GCYDebugWindow.m */,
 				3E818CB0208ED21800AFDC8E /* GCYDebugSettingViewController.h */,
 				3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */,
+				3E818CBA208F322900AFDC8E /* GCYDebugLoggerViewController.h */,
+				3E818CBB208F322900AFDC8E /* GCYDebugLoggerViewController.m */,
+				3E818CBD208F33C000AFDC8E /* NSString+GCYDebugLog.h */,
+				3E818CBE208F33C000AFDC8E /* NSString+GCYDebugLog.m */,
+				3E818CC0208F352F00AFDC8E /* GCYDebugLogger.h */,
+				3E818CC1208F352F00AFDC8E /* GCYDebugLogger.m */,
 			);
 			path = GCYDebuge;
 			sourceTree = "<group>";
@@ -1366,12 +1381,14 @@
 				0FDBE8A81F682786000B036C /* JKDBModel.m in Sources */,
 				0FDBE8AC1F682786000B036C /* AnimationViewController.m in Sources */,
 				0FDBE8C71F682786000B036C /* UserCenterItemModel.m in Sources */,
+				3E818CBC208F322900AFDC8E /* GCYDebugLoggerViewController.m in Sources */,
 				0F6486191FA6276A0007534C /* GSAlertController.m in Sources */,
 				0FDBE8AB1F682786000B036C /* WebSocketViewController.m in Sources */,
 				0FDBE8A61F682786000B036C /* GCYTestObject.m in Sources */,
 				0FDBE7061F6818B0000B036C /* AppDelegate.m in Sources */,
 				0FDBE8B31F682786000B036C /* FSCustomButton.m in Sources */,
 				3E818CA9208DDAF800AFDC8E /* GCYRacViewController.m in Sources */,
+				3E818CBF208F33C000AFDC8E /* NSString+GCYDebugLog.m in Sources */,
 				0FDBE8C01F682786000B036C /* SegmentTitleView.m in Sources */,
 				0FDBE8C21F682786000B036C /* TimerViewController.m in Sources */,
 				3E306C671FF3408A00C6ACB7 /* BezierViewController.m in Sources */,
@@ -1398,6 +1415,7 @@
 				0FDBE8BC1F682786000B036C /* STViewController.m in Sources */,
 				0FDBE8A31F682786000B036C /* UIView+Gewara.m in Sources */,
 				0FDFB52F1F93AF4F00B673D6 /* GCYAlertController.m in Sources */,
+				3E818CC2208F352F00AFDC8E /* GCYDebugLogger.m in Sources */,
 				0F22A65A1FB20FA600DE5AB8 /* UIView+PlaceholderView.m in Sources */,
 				0FDBE8991F682786000B036C /* NSTimer+Loop.m in Sources */,
 				0FDBE8C61F682786000B036C /* UserCenterCell.m in Sources */,
