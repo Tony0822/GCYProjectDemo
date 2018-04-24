@@ -8,6 +8,9 @@
 
 #import "GCYDebugManager.h"
 #import <mach/mach.h>
+#import "GCYDebugThumbnailView.h"
+#import "GCYDebugWindow.h"
+#import "GCYDebugSettingViewController.h"
 
 long memory_usage()
 {
@@ -89,10 +92,193 @@ float cpu_usage()
     return tot_cpu;
 }
 
+static GCYDebugManager* debugmanager = nil;
+
 @interface GCYDebugManager() <UIGestureRecognizerDelegate>
+{
+    CGPoint _startTouch;
+    NSTimer* _timer;
+    NSUInteger _count;
+    NSTimeInterval _lastTime;
+}
+
+@property (nonatomic, strong) GCYDebugThumbnailView *thumbnailView;
+@property (nonatomic, readonly) GCYDebugWindow *notificationWindow;
+
+@property (nonatomic,strong) CADisplayLink         *displayLink;
+@property (nonatomic,assign) CGFloat             averageFPS;
+
+@property (nonatomic, strong) UIWindow* appKeyWindow;
+
 
 @end
 
+
 @implementation GCYDebugManager
++ (GCYDebugManager *)shareInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!debugmanager) {
+            debugmanager = [[GCYDebugManager alloc] init];
+        }
+    });
+    return debugmanager;
+}
+
+- (void)displayDebugView {
+    self.appKeyWindow = [[UIApplication sharedApplication] keyWindow];
+    
+    if(!_notificationWindow)
+    {
+        _notificationWindow = [[GCYDebugWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _notificationWindow.backgroundColor = [UIColor clearColor];
+        _notificationWindow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _notificationWindow.windowLevel = UIWindowLevelStatusBar;
+        [_notificationWindow makeKeyAndVisible];
+    }
+    
+    if(!_thumbnailView)
+    {
+        _thumbnailView = [[GCYDebugThumbnailView alloc] initWithFrame:CGRectMake(self.appKeyWindow.width - 100, 100, 80, 80)];
+        _thumbnailView.clipsToBounds = YES;
+        UIPanGestureRecognizer* pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(paningGestureReceive:)];
+        pan.delegate = self;
+        [_thumbnailView addGestureRecognizer:pan];
+        
+        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapingGestureReceive:)];
+        //        tap.delegate = self;
+        [_thumbnailView addGestureRecognizer:tap];
+        
+        [pan requireGestureRecognizerToFail:tap];
+        
+//        [self mainBarSizeChangedIfNeed];
+    }
+    
+    [_thumbnailView sizeToFit];
+    _thumbnailView.left = _notificationWindow.width - _thumbnailView.width * 2;
+    _thumbnailView.top = _thumbnailView.height;
+    [_notificationWindow addSubview:_thumbnailView];
+    
+    [self startTimer];
+    
+    [self.appKeyWindow makeKeyAndVisible];
+    
+}
+
+- (void)startTimer {
+    [self stopTimer];
+    _timer = [NSTimer timerWithTimeInterval:0.1
+                                     target:self
+                                   selector:@selector(resetNotification)
+                                   userInfo:nil
+                                    repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(fpsUpdate:)];
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    
+}
+
+
+- (void)stopTimer {
+    [_timer invalidate];
+    _timer = nil;
+    
+    [_displayLink removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+
+}
+
+- (void)fpsUpdate:(CADisplayLink *)displayLink{
+    
+    
+    if (_lastTime == 0) {
+        _lastTime = displayLink.timestamp;
+        return;
+    }
+    
+    _count++;
+    NSTimeInterval delta = displayLink.timestamp - _lastTime;
+    
+    if (delta < 1.0000) return;
+    
+    _lastTime = displayLink.timestamp;
+    float fps = _count / delta;
+    self.averageFPS = fps;
+    _count = 0;
+    
+}
+
+
+
+- (void)resetNotification
+{
+//    NSArray     *imageOperations    = [[SDWebImageManager sharedManager] valueForKey:@"runningOperations"];  //缓存＋下载
+//    NSArray     *downloadOperations = ((NSOperationQueue*)[[SDWebImageDownloader sharedDownloader] valueForKey:@"downloadQueue"]).operations;
+//    NSString    *thumbString = [NSString stringWithFormat:@" req:%ld\n img:%ld/%ld",
+//                                (long)[[[GWProviderManager instance] allProviders] count],
+//                                (long)[imageOperations count], (long)[downloadOperations count]];
+    
+    
+    
+//    if(_debugSettingInfo.debugMainBarMinimize)
+//    {
+//        _thumbnailView.tipsLabel.text = thumbString;
+//    }
+//    else
+//    {
+        NSString* tips = [NSString stringWithFormat:@"cpu:%.2f%%\n mem:%ldM \nfps:%d",
+                          
+                          cpu_usage(),
+                          memory_usage(),
+                          (int)round(self.averageFPS)];
+        _thumbnailView.tipsLabel.text = tips;
+//    }
+    
+//    UINavigationController* naviController = (id)_notificationWindow.rootViewController;
+//    GCYDebugSettingViewController* rootController = (id)[naviController.viewControllers firstObject];
+//    rootController.imageOperations = imageOperations;
+//    [rootController reloadDisplay];
+}
+
+- (void)displayFullDebugController:(BOOL)show
+{
+    if(show)
+    {
+        GCYDebugSettingViewController* controller = [[GCYDebugSettingViewController alloc] init];
+        _notificationWindow.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
+        controller.view.clipsToBounds = YES;
+    }
+    else
+    {
+        _notificationWindow.rootViewController = nil;
+    }
+}
+
+#pragma mark -- GestureRecognizer
+
+- (void)paningGestureReceive:(UIPanGestureRecognizer *)recoginzer {
+    CGPoint touchPoint = [recoginzer locationInView:_thumbnailView];
+    if (recoginzer.state == UIGestureRecognizerStateBegan) {
+        _startTouch = touchPoint;
+    } else if (recoginzer.state == UIGestureRecognizerStateEnded) {
+        
+    } else if (recoginzer.state == UIGestureRecognizerStateCancelled) {
+        
+    } else if(UIGestureRecognizerStateChanged == recoginzer.state) {
+        _thumbnailView.left = _thumbnailView.left + (touchPoint.x - _startTouch.x);
+        _thumbnailView.top = _thumbnailView.top + (touchPoint.y - _startTouch.y);
+    }
+}
+
+- (void)tapingGestureReceive:(UIPanGestureRecognizer *)recoginzer {
+    [self displayFullDebugController:YES];
+}
+
+
+
+
+
+
+
 
 @end

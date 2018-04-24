@@ -23,6 +23,7 @@
 #import "GCYInstrumentViewController.h"
 #import "RuntimeViewController.h"
 #import "NetWorkingViewController.h"
+#import "GCYRacViewController.h"
 
 
 @interface UserCenterViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -50,7 +51,8 @@
                                                           detailText:@"AnimationDemo"
                                                        accessoryType:UserCenterAccessoryTypeIndicator];
     item1.executeCode = ^{
-        AnimationViewController *vc = [[AnimationViewController alloc] init];
+//        AnimationViewController *vc = [[AnimationViewController alloc] init];
+        GCYRacViewController *vc = [[GCYRacViewController alloc] init];
         [bself.navigationController pushViewController:vc animated:YES];
     };
     

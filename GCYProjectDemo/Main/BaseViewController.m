@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "GCYDebugManager.h"
 
 @interface BaseViewController ()
 
@@ -20,7 +21,13 @@
     // 设置从导航下面开始布局
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+#if ((DEBUG) || (ADHOC))
+//    [[GCYDebugManager shareInstance] displayDebugView];
+#endif
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

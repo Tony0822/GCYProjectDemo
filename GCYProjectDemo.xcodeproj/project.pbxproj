@@ -86,6 +86,10 @@
 		3E306C671FF3408A00C6ACB7 /* BezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E306C661FF3408A00C6ACB7 /* BezierViewController.m */; };
 		3E6177FB2047D80B003CAA85 /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */; };
 		3E818CA5208DC2DA00AFDC8E /* GCYDebugManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CA4208DC2DA00AFDC8E /* GCYDebugManager.m */; };
+		3E818CA9208DDAF800AFDC8E /* GCYRacViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CA8208DDAF800AFDC8E /* GCYRacViewController.m */; };
+		3E818CAC208EC8E900AFDC8E /* GCYDebugThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CAB208EC8E900AFDC8E /* GCYDebugThumbnailView.m */; };
+		3E818CAF208ECB1C00AFDC8E /* GCYDebugWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CAE208ECB1C00AFDC8E /* GCYDebugWindow.m */; };
+		3E818CB2208ED21800AFDC8E /* GCYDebugSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */; };
 		3E958B81207C7E6600E45020 /* NetWorkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E958B80207C7E6600E45020 /* NetWorkingViewController.m */; };
 		3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */; };
 		3EC7CB53201B177B0090B1B3 /* GCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CB52201B177B0090B1B3 /* GCYDevice.m */; };
@@ -271,6 +275,14 @@
 		3E6177FA2047D80B003CAA85 /* RuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
 		3E818CA3208DC2DA00AFDC8E /* GCYDebugManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugManager.h; sourceTree = "<group>"; };
 		3E818CA4208DC2DA00AFDC8E /* GCYDebugManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugManager.m; sourceTree = "<group>"; };
+		3E818CA7208DDAF800AFDC8E /* GCYRacViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYRacViewController.h; sourceTree = "<group>"; };
+		3E818CA8208DDAF800AFDC8E /* GCYRacViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYRacViewController.m; sourceTree = "<group>"; };
+		3E818CAA208EC8E900AFDC8E /* GCYDebugThumbnailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugThumbnailView.h; sourceTree = "<group>"; };
+		3E818CAB208EC8E900AFDC8E /* GCYDebugThumbnailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugThumbnailView.m; sourceTree = "<group>"; };
+		3E818CAD208ECB1C00AFDC8E /* GCYDebugWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugWindow.h; sourceTree = "<group>"; };
+		3E818CAE208ECB1C00AFDC8E /* GCYDebugWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugWindow.m; sourceTree = "<group>"; };
+		3E818CB0208ED21800AFDC8E /* GCYDebugSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugSettingViewController.h; sourceTree = "<group>"; };
+		3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugSettingViewController.m; sourceTree = "<group>"; };
 		3E958B7F207C7E6600E45020 /* NetWorkingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkingViewController.h; sourceTree = "<group>"; };
 		3E958B80207C7E6600E45020 /* NetWorkingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkingViewController.m; sourceTree = "<group>"; };
 		3EBE1A491FF373F30094D6B2 /* GCYProjectDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCYProjectDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -343,7 +355,9 @@
 		0FDBE7001F6818B0000B036C /* GCYProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3E818CA6208DDADC00AFDC8E /* RAC */,
 				3E818CA2208DC29F00AFDC8E /* GCYDebuge */,
+				3E818CB3208F0B4000AFDC8E /* Networking */,
 				0FDBE7FF1F682786000B036C /* Common */,
 				3E958B7E207C7E2600E45020 /* AFNetWorkingViewController */,
 				3E002ACD1FF23ABC00999C7D /* InstrumentDemo */,
@@ -1034,8 +1048,30 @@
 			children = (
 				3E818CA3208DC2DA00AFDC8E /* GCYDebugManager.h */,
 				3E818CA4208DC2DA00AFDC8E /* GCYDebugManager.m */,
+				3E818CAA208EC8E900AFDC8E /* GCYDebugThumbnailView.h */,
+				3E818CAB208EC8E900AFDC8E /* GCYDebugThumbnailView.m */,
+				3E818CAD208ECB1C00AFDC8E /* GCYDebugWindow.h */,
+				3E818CAE208ECB1C00AFDC8E /* GCYDebugWindow.m */,
+				3E818CB0208ED21800AFDC8E /* GCYDebugSettingViewController.h */,
+				3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */,
 			);
 			path = GCYDebuge;
+			sourceTree = "<group>";
+		};
+		3E818CA6208DDADC00AFDC8E /* RAC */ = {
+			isa = PBXGroup;
+			children = (
+				3E818CA7208DDAF800AFDC8E /* GCYRacViewController.h */,
+				3E818CA8208DDAF800AFDC8E /* GCYRacViewController.m */,
+			);
+			path = RAC;
+			sourceTree = "<group>";
+		};
+		3E818CB3208F0B4000AFDC8E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		3E958B7E207C7E2600E45020 /* AFNetWorkingViewController */ = {
@@ -1325,6 +1361,7 @@
 				0FDBE8A61F682786000B036C /* GCYTestObject.m in Sources */,
 				0FDBE7061F6818B0000B036C /* AppDelegate.m in Sources */,
 				0FDBE8B31F682786000B036C /* FSCustomButton.m in Sources */,
+				3E818CA9208DDAF800AFDC8E /* GCYRacViewController.m in Sources */,
 				0FDBE8C01F682786000B036C /* SegmentTitleView.m in Sources */,
 				0FDBE8C21F682786000B036C /* TimerViewController.m in Sources */,
 				3E306C671FF3408A00C6ACB7 /* BezierViewController.m in Sources */,
@@ -1334,6 +1371,7 @@
 				0FDBE8B81F682786000B036C /* LineTableViewCell.m in Sources */,
 				3E002AD01FF23C2700999C7D /* GCYInstrumentViewController.m in Sources */,
 				0FDBE8AE1F682786000B036C /* LyricLabel.m in Sources */,
+				3E818CAF208ECB1C00AFDC8E /* GCYDebugWindow.m in Sources */,
 				0FDBE8C11F682786000B036C /* SegmentViewController.m in Sources */,
 				0FDFB52C1F939AAA00B673D6 /* GCYAlertViewController.m in Sources */,
 				3E958B81207C7E6600E45020 /* NetWorkingViewController.m in Sources */,
@@ -1342,6 +1380,7 @@
 				3E306C621FF33C1200C6ACB7 /* BezierCurveView.m in Sources */,
 				0FDBE8B51F682786000B036C /* BaseViewController.m in Sources */,
 				0FDBE8A21F682786000B036C /* UIView+GCYAddForRoundedCorner.m in Sources */,
+				3E818CB2208ED21800AFDC8E /* GCYDebugSettingViewController.m in Sources */,
 				0FDBE8AA1F682786000B036C /* WebSocketManager.m in Sources */,
 				0FDBE8AF1F682786000B036C /* Quartz2DView.m in Sources */,
 				0FDBE8B61F682786000B036C /* LoopScrollView.m in Sources */,
@@ -1355,6 +1394,7 @@
 				0FDBE8A91F682786000B036C /* FMDBViewController.m in Sources */,
 				0FDBE8BE1F682786000B036C /* PageContentView.m in Sources */,
 				0FDBE8C91F682786000B036C /* UserCenterViewController.m in Sources */,
+				3E818CAC208EC8E900AFDC8E /* GCYDebugThumbnailView.m in Sources */,
 				0FDBE8A41F682786000B036C /* UIView+XWAddForRoundedCorner.m in Sources */,
 				3E306C5B1FF2426700C6ACB7 /* BaseTableViewController.m in Sources */,
 				3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */,

@@ -11,4 +11,15 @@
 
 @interface GCYDebugManager : NSObject
 
++ (GCYDebugManager *)shareInstance;
+
+- (void)displayDebugView;
+
+
+
+
+
+
+
+
 @end
