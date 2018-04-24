@@ -10,4 +10,6 @@
 
 @interface NSString (GCYDebugLog)
 
++ (NSString*)debugLogFilePath;
+
 @end

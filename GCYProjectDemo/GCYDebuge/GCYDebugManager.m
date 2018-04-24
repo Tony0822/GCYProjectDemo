@@ -272,6 +272,16 @@ static GCYDebugManager* debugmanager = nil;
 
 - (void)tapingGestureReceive:(UIPanGestureRecognizer *)recoginzer {
     [self displayFullDebugController:YES];
+//    GCYDebugSettingViewController *debugSettingViewController = [[GCYDebugSettingViewController alloc] init];
+//    UIWindow *screenWindow = [[UIApplication sharedApplication] keyWindow];
+//    UINavigationController *debugSettingViewControllerNav = [[UINavigationController alloc] initWithRootViewController:debugSettingViewController];
+//    UIViewController *presentedViewController = screenWindow.rootViewController;
+//    while (presentedViewController.presentedViewController)
+//    {
+//        presentedViewController = presentedViewController.presentedViewController;
+//    }
+////    [GSDebugManager sharedGSDebugManager].thumbnailView.hidden = YES;
+//    [presentedViewController presentViewController:debugSettingViewControllerNav animated:YES completion:nil];
 }
 
 

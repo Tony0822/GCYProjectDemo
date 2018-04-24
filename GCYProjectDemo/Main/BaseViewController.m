@@ -24,7 +24,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 #if ((DEBUG) || (ADHOC))
-//    [[GCYDebugManager shareInstance] displayDebugView];
+    [[GCYDebugManager shareInstance] displayDebugView];
 #endif
     
 }
