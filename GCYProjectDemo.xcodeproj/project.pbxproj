@@ -90,6 +90,8 @@
 		3E818CAC208EC8E900AFDC8E /* GCYDebugThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CAB208EC8E900AFDC8E /* GCYDebugThumbnailView.m */; };
 		3E818CAF208ECB1C00AFDC8E /* GCYDebugWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CAE208ECB1C00AFDC8E /* GCYDebugWindow.m */; };
 		3E818CB2208ED21800AFDC8E /* GCYDebugSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */; };
+		3E818CB6208F0C2100AFDC8E /* GCYNetworkingConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB5208F0C2100AFDC8E /* GCYNetworkingConfigure.m */; };
+		3E818CB9208F0D1C00AFDC8E /* GCYNetworkingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E818CB8208F0D1C00AFDC8E /* GCYNetworkingBase.m */; };
 		3E958B81207C7E6600E45020 /* NetWorkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E958B80207C7E6600E45020 /* NetWorkingViewController.m */; };
 		3EBE1B7E1FF37A920094D6B2 /* GCYChartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBE1B7D1FF37A920094D6B2 /* GCYChartsViewController.m */; };
 		3EC7CB53201B177B0090B1B3 /* GCYDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7CB52201B177B0090B1B3 /* GCYDevice.m */; };
@@ -283,6 +285,10 @@
 		3E818CAE208ECB1C00AFDC8E /* GCYDebugWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugWindow.m; sourceTree = "<group>"; };
 		3E818CB0208ED21800AFDC8E /* GCYDebugSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYDebugSettingViewController.h; sourceTree = "<group>"; };
 		3E818CB1208ED21800AFDC8E /* GCYDebugSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYDebugSettingViewController.m; sourceTree = "<group>"; };
+		3E818CB4208F0C2100AFDC8E /* GCYNetworkingConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingConfigure.h; sourceTree = "<group>"; };
+		3E818CB5208F0C2100AFDC8E /* GCYNetworkingConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingConfigure.m; sourceTree = "<group>"; };
+		3E818CB7208F0D1C00AFDC8E /* GCYNetworkingBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCYNetworkingBase.h; sourceTree = "<group>"; };
+		3E818CB8208F0D1C00AFDC8E /* GCYNetworkingBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCYNetworkingBase.m; sourceTree = "<group>"; };
 		3E958B7F207C7E6600E45020 /* NetWorkingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkingViewController.h; sourceTree = "<group>"; };
 		3E958B80207C7E6600E45020 /* NetWorkingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkingViewController.m; sourceTree = "<group>"; };
 		3EBE1A491FF373F30094D6B2 /* GCYProjectDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCYProjectDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1070,6 +1076,10 @@
 		3E818CB3208F0B4000AFDC8E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				3E818CB4208F0C2100AFDC8E /* GCYNetworkingConfigure.h */,
+				3E818CB5208F0C2100AFDC8E /* GCYNetworkingConfigure.m */,
+				3E818CB7208F0D1C00AFDC8E /* GCYNetworkingBase.h */,
+				3E818CB8208F0D1C00AFDC8E /* GCYNetworkingBase.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1403,9 +1413,11 @@
 				0FDBE7031F6818B0000B036C /* main.m in Sources */,
 				0FDBE8BA1F682786000B036C /* TopTableViewCell.m in Sources */,
 				0FDBE8B41F682786000B036C /* DWTableViewHelper.m in Sources */,
+				3E818CB6208F0C2100AFDC8E /* GCYNetworkingConfigure.m in Sources */,
 				3E6177FB2047D80B003CAA85 /* RuntimeViewController.m in Sources */,
 				3E818CA5208DC2DA00AFDC8E /* GCYDebugManager.m in Sources */,
 				0FDBE8CD1F68366F000B036C /* TencentViewController.m in Sources */,
+				3E818CB9208F0D1C00AFDC8E /* GCYNetworkingBase.m in Sources */,
 				0FDBE8B11F682786000B036C /* CALayer+FSUI.m in Sources */,
 				0FDBE8AD1F682786000B036C /* CAShapeLayerAndTextLayerView.m in Sources */,
 				0FDBE8C81F682786000B036C /* UserCenterSectionModel.m in Sources */,
