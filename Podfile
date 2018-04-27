@@ -15,6 +15,7 @@ target 'GCYProjectDemo' do
     pod 'CocoaAsyncSocket'
     pod 'MJRefresh'
     pod 'ReactiveCocoa'
+    pod 'GCYBase', :git=> 'https://github.com/Tony0822/GCYBase.git', commit: '6a0ecb5'
 #
 #    use_frameworks!
 #    pod 'Charts'
